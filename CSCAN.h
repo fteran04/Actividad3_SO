@@ -6,6 +6,6 @@
 #include <algorithm>
 using namespace std;
 
-int CSCAN(vector<int> &requests, int init);  
+int CSCAN(vector<int> &requests, int init, bool barrido_hacia_arriba);  
 
 #endif

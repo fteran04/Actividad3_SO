@@ -44,7 +44,7 @@ int main(){
 
     //movFcfs = FCFS(requests1, posicionInicial);
     movScan = SCAN(requests2, posicionInicial);
-    movCscan = CSCAN(requests2, posicionInicial);
+    movCscan = CSCAN(requests2, posicionInicial, false);
 
     cout << "La cantidad de movimientos para cada algoritmo es:" << endl;
     //cout << "FCFS = " << movFcfs << endl;
