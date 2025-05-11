@@ -5,7 +5,7 @@
 #include <ctime>
 #include "FCFS.h"
 #include "SCAN.h"
-#include "C-SCAN.h"
+#include "CSCAN.h"
 
 using namespace std;
 
