@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <fstream>
 using namespace std;
 
 int CSCAN(vector<int> &requests, int init, bool barrido_hacia_arriba);  

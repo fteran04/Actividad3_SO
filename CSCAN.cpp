@@ -1,6 +1,4 @@
 #include "CSCAN.h"
-#include <algorithm>
-#include <fstream>
 
 using namespace std;
 
