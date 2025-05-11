@@ -2,6 +2,7 @@
 #define FCFS_H
 
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
