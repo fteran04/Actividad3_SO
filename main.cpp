@@ -42,12 +42,12 @@ int main(){
     posicionInicial = requests2[0];
     posicionInicial = requests3[0];
 
-    //movFcfs = FCFS(requests1, posicionInicial);
+    movFcfs = FCFS(requests1, posicionInicial);
     movScan = SCAN(requests2, posicionInicial);
     movCscan = CSCAN(requests2, posicionInicial, false);
 
     cout << "La cantidad de movimientos para cada algoritmo es:" << endl;
-    //cout << "FCFS = " << movFcfs << endl;
+    cout << "FCFS = " << movFcfs << endl;
     cout << "SCAN = " << movScan << endl;
     cout << "C-SCAN = " << movCscan << endl;
     return 0;
