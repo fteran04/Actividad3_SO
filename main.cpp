@@ -3,6 +3,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <set>
 #include "FCFS.h"
 #include "SCAN.h"
 #include "CSCAN.h"
@@ -14,11 +15,16 @@ int main(){
     srand(time(nullptr));
     ofstream archivoEscritura("randomRequest.txt");
     vector<int> requests;
-    
+    set<int> nums;
+
     // generación de 1000 consultas random
-    for(int i = 0; i < 1000; i++){
+    while(nums.size() != 1000){
         randomNum = rand() % 5000;
-        archivoEscritura << randomNum << endl;
+        if(nums.find(randomNum) == nums.end()){
+            archivoEscritura << randomNum << endl;
+            nums.insert(randomNum);
+        }
+        
     }
     archivoEscritura.close();
 
@@ -29,16 +35,16 @@ int main(){
     }
     archivoLectura.close();
 
-    // Posicion inicial de la cabeza
-    posicionInicial = 2637;
+    // Posicion inicial de la cabeza, se toma un valor arbitrario que se encuentre en vector de consultas
+    posicionInicial = requests[0];
 
-    movFcfs = FCFS(requests, posicionInicial);
+    //movFcfs = FCFS(requests, posicionInicial);
     movScan = SCAN(requests, posicionInicial);
-    movCscan = CSCAN(requests, posicionInicial);
+    //movCscan = CSCAN(requests, posicionInicial);
 
     cout << "La cantidad de movimientos para cada algoritmo es:" << endl;
-    cout << "FCFS = " << movFcfs << endl;
+    //cout << "FCFS = " << movFcfs << endl;
     cout << "SCAN = " << movScan << endl;
-    cout << "C-SCAN = " << movCscan << endl;
+    //cout << "C-SCAN = " << movCscan << endl;
     return 0;
 }
