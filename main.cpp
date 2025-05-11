@@ -3,6 +3,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 #include "FCFS.h"
 #include "SCAN.h"
 #include "CSCAN.h"
@@ -32,13 +33,13 @@ int main(){
     // Posicion inicial de la cabeza
     posicionInicial = 2637;
 
-    movFcfs = FCFS(requests, posicionInicial);
-    movScan = SCAN(requests, posicionInicial);
+    //movFcfs = FCFS(requests, posicionInicial);
+    //movScan = SCAN(requests, posicionInicial);
     movCscan = CSCAN(requests, posicionInicial);
 
     cout << "La cantidad de movimientos para cada algoritmo es:" << endl;
-    cout << "FCFS = " << movFcfs << endl;
-    cout << "SCAN = " << movScan << endl;
+    //cout << "FCFS = " << movFcfs << endl;
+    //cout << "SCAN = " << movScan << endl;
     cout << "C-SCAN = " << movCscan << endl;
     return 0;
 }
